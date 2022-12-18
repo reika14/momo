@@ -1,87 +1,134 @@
-<html>
-<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://foryou.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" /><script src="https://foryou.likeadream.repl.co/script.js"></script>
-<head>
-<!-- 
-This code was made by Rayya R!
-Blog: https://sinkronin.com
-Instagram: @rayyarrr
-TikTok: @rayyarr_
-Telegram: @rayyarr
-WhatsApp: 6282130626142
--->
-</head>
-<body>
-<!-- Ganti Wallpaper --><style>
-body{background-image: url("https://i.postimg.cc/W1ZVKCFy/IMG-20211108-214640-213.jpg");background-repeat: no-repeat;background-size: 100% 100% 100%;}
-</style>
-
-<div id="konten">
-
-<input class='chatMenu hidden' id='offchatMenu' type='checkbox' />
-<div class='chatBox'>
-  <div id='data' class='chatContent'>
-    
-    <div class='chatText'>
-      <span id='text1'>Aku di sini</span>
-      <span id='text2'>Kan selalu menunggumu</span>
-      <span id='text3'>Sampai kapanpun</span>
-      <span id='text4'>Ku kan menunggumu</span>
-      <span id ='typingsk' class='typing'>Sukaa &#9829; &#9829; &#9829;</span>
-      <span id ='typingg' class='typing'>Engga suka :(</span>
-    </div>
-  </div>
+document.getElementById("kadoIn").onclick = function() {if(fungsiAwal==0){audio.play();fungsiAwal=1;kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";wallpaper.style="transform: scale(1.5);";ket.style="display:none";setTimeout(mulainama,700)}}
   
-  <a id="blscht" class='balasChat' onclick='bukaWa()'>
-    <span>Balas pesan...</span>        
-  </a>
-</div>
+  async function mulainama() {
+           kadoIn.style="display:none";ket.style="display:none";
+           Content.style = "opacity:1;margin-top:2vh";
+           bodyblur.style="opacity:.7";
+           wallpaper.style="transform: scale(1);";
+           fotostiker.style="display:inline-flex;";
+           setTimeout(ftmuncul,200);
+           setTimeout(kethalo,500);
+  }
+  
+  function ftmuncul(){
+    if(ftganti==0){fotostiker.src = deffotostiker;fotostiker.style="display:inline-flex;opacity:1;transform:scale(1)";}
+    if(ftganti==1){fotostiker.src = fotostiker2.src;fotostiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+    if(ftganti==2){fotostiker.src = fotostiker3.src;fotostiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+    if(ftganti==3){fotostiker.src = fotostiker4.src;fotostiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);box-shadow:none;background:none;border:0;width:150px;height:150px";setTimeout(jjfoto,400);}
+  }
+  function fthilang(){fotostiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(.1)";}
+  function jjfoto(){fotostiker.style.animation="rto .8s infinite alternate";setInterval(createHeart,200);}
+  
+  function kethalo(){
+  new TypeIt("#halo", {
+  strings: ["" + vketikhalo], startDelay: 50, speed: 60, waitUntilVisible: true,
+  afterComplete: function(){
+    halo.innerHTML = vketikhalo;
+    setTimeout(bqmuncul,200);
+  },}).go();
+  }
+  function kethalo2(){
+  bqhilang();fthilang();ftganti=1;setTimeout(ftmuncul,400);
+  halo.style="display:none";
+  new TypeIt("#halo2", {
+  strings: ["" + vketikhalo2], startDelay: 50, speed: 60, waitUntilVisible: true,
+  afterComplete: function(){
+    bq.style="";
+    halo2.innerHTML = vketikhalo2;
+    setTimeout(mulaiketikAkhir,500);
+  },}).go();
+  }
+  vketikhalo3=halo3.innerHTML;halo3.innerHTML="";
+  function mulaiketikAkhir(){
+  halo3.style="position:relative !important";
+  new TypeIt("#halo3", {
+  strings: ["" + vketikhalo3], cursor: false, startDelay: 50, speed: 55, waitUntilVisible: true,
+  afterComplete: function(){
+    halo3.innerHTML = vketikhalo3;
+    setTimeout(showtanggal,300);
+    setTimeout(munculbwh,800);
+    setTimeout(fthilang,600);ftganti=2;setTimeout(ftmuncul,1000);
+    setInterval(createHeart,400);setTimeout(tombol,7000);
+  },}).go();
+  }
+  function showtanggal(){tanggal.style="position:relative !important;opacity:1;transform:scale(1)";}
+  defkalimatbawah = kalimatbawah.innerHTML;
+  function munculbwh(){kalimatbawah.innerHTML=defkalimatbawah;setTimeout(munculbwh2,2000);otomatis();}
+  function munculbwh2(){kalimatbawah.innerHTML=kalimatbawah2.innerHTML;setTimeout(munculbwh3,2000);otomatis();}
+  function munculbwh3(){kalimatbawah.innerHTML=kalimatbawah3.innerHTML;setTimeout(munculbwh,2000);otomatis();}
+  function otomatis() {kalimatbawah.style="position:relative;opacity:0;transform:scale(.3);";setTimeout(anim,300);} 
+  function anim() {kalimatbawah.style="position:relative;opacity:1;transform:scale(1);";}
+  
+  function bqmuncul(){bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);margin-top:0";mulaiketik1();fungsi=1;}
+  function bqhilang(){wallpaper.style="transform: scale(2);";bodyblur.style="opacity:.5";bq.style = "position:relative;transition:all .7s ease;";}
+  
+  function tombol(){Tombol.style="opacity:1;transform: scale(1);";fungsi=1}
+  document.getElementById("By").onclick = function() {if(fungsi==1){menuju();}}
+  async function menuju(){window.location = "https://api.whatsapp.com/send?phone=6281238996370&text=" + pesanwhatsapp;}
 
-<div id="bodyblur">
-<div id="foto"><img src="https://cahyacc.github.io/media/IMG_20220829_144928_956.webp" width="100px" height="100px"/></div>
-<div id="teksblur"><span>Ku sangat menyayanginya</span></div>
-</div>
+  opsLclick=0;opsLcheck=0;
+  document.getElementById("bq").onclick = function() {
+    if(opsLclick==1){
+      if(opsLcheck==1){mulaiketik2();}
+      if(opsLcheck==2){mulaiketik3();}
+      if(opsLcheck==3){mulaiketik4();}
+      if(opsLcheck==4){mulaiketik5();}
+      if(opsLcheck==5){kethalo2();}
+      opsLclick=0;
+    }
+  }
+  
+  vketik1=kalimat.innerHTML;kalimat.innerHTML = "";
+  function mulaiketik1(){
+  new TypeIt("#kalimat", {
+  strings: ["" + vketik1], startDelay: 400, speed: 40, deleteSpeed: 20, breakLines: false, waitUntilVisible: true, lifelike: true,
+  afterComplete: function(){
+    opsL.style.opacity=".8";opsLcheck=1;opsLclick=1;
+  },}).go();
+  }
+  
+  vketik2=kalimatb.innerHTML;kalimatb.innerHTML = "";
+  function mulaiketik2(){
+  kalimat.innerHTML = "";kalimat.style.display="none";
+  opsL.style.opacity="0";
+  new TypeIt("#kalimatb", {
+  strings: ["" + vketik2], startDelay: 100, speed: 40, waitUntilVisible: true,
+  afterComplete: function(){
+    opsL.style.opacity=".8";opsLcheck=2;opsLclick=1;
+  },}).go();
+  }
+  
+  vketik3=kalimatc.innerHTML;kalimatc.innerHTML = "";
+  function mulaiketik3(){
+  kalimatb.innerHTML = "";kalimatb.style.display="none";
+  opsL.style.opacity="0";
+  new TypeIt("#kalimatc", {
+  strings: ["" + vketik3], startDelay: 100, speed: 40, waitUntilVisible: true,
+  afterComplete: function(){
+    opsL.style.opacity=".8";opsLcheck=3;opsLclick=1;
+  },}).go();
+  }
 
-<script type="text/javascript">
-//Opsi WhatsApp
- function bukaWa(){window.location = 
-"https://api.whatsapp.com/send?phone=6281238996370&text=Hei, Aku udah liat semuanya ><" + "%0A%0A" + window.suka + "%0A%0A" + "*" + "Dikirim:" + "*" + "%20" + dateTime;} 
-            
-function play() {
-  //Link Audio Bisa Diganti
-  var audio = new Audio('https://sf16-ies-music.tiktokcdn.com/obj/ies-music-aiso/6985212108493359899.mp3');
-  audio.play();
-}
-            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
-            const swals = Swal.mixin({
-                allowOutsideClick: false,
-            });
-            async function mulai(){              
-                    await swals.fire('Hai kamu :)');
-                    await swals.fire('Lihat ini sampai akhir ya :)');                   
-                    setTimeout(teks0,1200);setTimeout(check,9000);setTimeout(teks1,9000);play()
-                }
-            async function pertanyaan(){
-                var { isConfirmed: suka } = await swals.fire({
-                        title: `Kamu suka engga nih :(`,
-                        confirmButtonText: 'Sukaaa',
-                        cancelButtonText: 'G',
-                        allowOutsideClick: false,
-                        showCancelButton: true,
-                });
-                if(suka){
-                    window.suka = "Aku terharu ><"
-                    document.getElementById('typingsk').style.display = "inline-block";document.getElementById('typingsk').style.opacity = "1";
-                    scroll()
-                } else {
-                    window.suka = "Aku engga suka :("
-                    document.getElementById('typingg').style.display = "inline-block";document.getElementById('typingg').style.opacity = "1";
-                    scroll()
-                }
-                await swals.fire('Okee. Nanti klik balas pesan ya :)');
-                document.getElementById('blscht').style.display = "flex";
-            }
-//Mulai
-mulai()
-</script>
-</body>
-</html>
+  vketik4=kalimatd.innerHTML;kalimatd.innerHTML = "";
+  vketik5=kalimate.innerHTML;kalimate.innerHTML = "";
+  function mulaiketik4(){
+  kalimatc.innerHTML = "";kalimatc.style.display="none";
+  opsL.style.opacity="0";
+  new TypeIt("#kalimatd", {
+  strings: ["" + vketik4, "" + vketik5], startDelay: 100, speed: 40, deleteSpeed: 10, breakLines: false, waitUntilVisible: true, lifelike: true,
+  afterComplete: function(){
+    opsL.style.opacity=".8";opsLcheck=4;opsLclick=1;
+  },}).go();
+  }
+
+  vketik6=kalimatf.innerHTML;kalimatf.innerHTML = "";
+  function mulaiketik5(){
+  kalimatd.innerHTML = "";kalimatd.style.display="none";
+  opsL.style.opacity="0";
+  new TypeIt("#kalimatf", {
+  strings: ["" + vketik6], startDelay: 100, speed: 40, deleteSpeed: 10, breakLines: false, waitUntilVisible: true, lifelike: true,
+  afterComplete: function(){
+     kalimatf.innerHTML = vketik6;
+    opsLcheck=5;opsLclick=1;
+  },}).go();
+  }
